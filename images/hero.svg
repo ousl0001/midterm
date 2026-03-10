@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Simple local hero image (SVG) so the project remains self-contained.
+  This satisfies the assignment requirement to use an <img> in the header.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500" role="img" aria-label="Ocean horizon with soft waves">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a786f"/>
+      <stop offset="1" stop-color="#8bd7ce"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b5f57"/>
+      <stop offset="1" stop-color="#0a3f3a"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.7"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1600" height="320" fill="url(#sky)"/>
+  <!-- Sun glow -->
+  <circle cx="1240" cy="120" r="90" fill="#ffffff" opacity="0.14" filter="url(#soft)"/>
+  <circle cx="1240" cy="120" r="48" fill="#ffffff" opacity="0.12"/>
+
+  <!-- Sea -->
+  <rect y="260" width="1600" height="240" fill="url(#sea)"/>
+
+  <!-- Wave lines -->
+  <g opacity="0.25" fill="none" stroke="#d7fff9" stroke-width="3">
+    <path d="M0 310 C150 290 260 330 420 310 S690 330 840 310 S1120 330 1260 310 S1450 330 1600 310"/>
+    <path d="M0 350 C180 330 270 370 450 350 S710 370 900 350 S1160 370 1340 350 S1490 370 1600 350"/>
+    <path d="M0 390 C170 372 290 410 460 392 S730 412 900 392 S1160 412 1330 392 S1500 412 1600 392"/>
+  </g>
+
+  <!-- Foreground sand hint -->
+  <path d="M0 500 C260 420 480 470 720 440 C980 405 1180 480 1600 430 L1600 500 Z" fill="#f4efe5" opacity="0.75"/>
+</svg>
+

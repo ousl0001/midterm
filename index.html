@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lone Starfish</title>
+
+    <!-- Google Fonts: Playfair Display for headings, Lora for body -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ========================
+       HEADER
+       Uses <img> tag for the image;
+       site title is positioned on top via CSS
+  ======================== -->
+    <header>
+      <!-- Header image -->
+      <img src="images/hero.svg" alt="Starfish on sandy beach" />
+      <!-- Site title overlaid on top of the header image -->
+      <h1>Lone Starfish</h1>
+    </header>
+
+    <!-- ========================
+       NAVIGATION
+  ======================== -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#facts">Facts</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ========================
+       MAIN CONTENT
+  ======================== -->
+    <main id="home">
+      <!-- ---- ARTICLE SECTION ---- -->
+      <!-- Image floats left so text wraps around it -->
+      <article id="story">
+        <h2>Life of a Starfish</h2>
+
+        <!-- Article image - text wraps around it via float in CSS -->
+        <img src="images/starfish.svg" alt="A lone starfish up close" />
+
+        <p>
+          Swallower calia Black angelfish grunter striped bass scissor-tail
+          rasbora; slender mola. Snapper catalufa silver driftfish, kaiuga
+          lonfish boga greeneye; french angelfish peamouth halfbeak batfish
+          Australian prowfish mouthbrooder. Gibberfish lui club mooneye
+          smoothtongue; amur pike barbeled houndshark dwarf loach beachsalmon
+          archerfish longfin fingerfish, thornfish; plownose chimaera gurnard.
+          Dragon goby long-finned char bluntnose knifefish aruana eelpout
+          elasmobranchii snipefish; rock bass sea devil trunkfish. Australian
+          herring barbel Mexican golden trout, killfish bonito; northern
+          anchovy. Waryfish, "lionfish; longfin smelt; leopard danio
+          dragonfish." Lost River sucker, mojarra. Modoc so northern dingfish
+          mudsucker x-ray tetra squaretail jackfish. Paradise fish cuchia
+          Redhorse sucker ayu Ganges shark rocking flyingfish pearleye mahi-mahi
+          yellow weaver; ghost pipefish ide armoured catfish halibut. Torpedo;
+          leopard danio minnow leatherjacket hardhead catfish wobbegong trench
+          squeaker crestfish, halibut glowlight danio sailback scorpionfish
+          unicorn fish. Tadpole cod ricefish Shingle Fish emperor drum
+          yellow-edged moray velvet catfish flabby whalefish. Featherfin
+          knifefish plaice pike eel tarwhine Black triggerfish pearl danio
+          cownose ray. Marluccid hake, platy peamouth humuhumunukunukuapua'a
+          barred danio. Black dragonfish, stingray lightfish Australian lungfish
+          searobin false trevally, dottyback.
+        </p>
+      </article>
+
+      <!-- ---- FACTS SECTION ---- -->
+      <!-- Proper unordered list <ul><li> syntax -->
+      <section id="facts">
+        <h2>Facts About Starfish</h2>
+        <ul>
+          <li>
+            Australian herring barbel Mexican golden trout, killfish bonito;
+            northern anchovy.
+          </li>
+          <li>
+            Waryfish, "lionfish; longfin smelt; leopard danio dragonfish." Lost
+            River sucker, mojarra.
+          </li>
+          <li>
+            Herring barbel Mexican golden trout, killfish bonito; northern
+            anchovy.
+          </li>
+          <li>
+            Waryfish, "lionfish; longfin smelt; leopard danio dragonfish." Lost
+            River sucker, mojarra.
+          </li>
+        </ul>
+      </section>
+
+      <!-- ---- CONTACT FORM SECTION ---- -->
+      <!-- All inputs linked to their labels via for/id attributes -->
+      <section id="contact">
+        <h2>Contact to learn more</h2>
+
+        <form action="#" method="post">
+          <!-- Name: label for="name" links to input id="name" -->
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" />
+          </div>
+
+          <!-- Email: label for="email" links to input id="email" -->
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+            />
+          </div>
+
+          <!-- Message: label for="message" links to textarea id="message" -->
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+
+          <!-- Radio buttons: each label linked via for/id -->
+          <fieldset class="radio-group">
+            <legend>Would you like to visit the starfish?</legend>
+            <div class="radio-options">
+              <label for="visit-yes">
+                <input type="radio" id="visit-yes" name="visit" value="yes" />
+                Yes
+              </label>
+              <label for="visit-no">
+                <input type="radio" id="visit-no" name="visit" value="no" />
+                No
+              </label>
+              <label for="visit-maybe">
+                <input
+                  type="radio"
+                  id="visit-maybe"
+                  name="visit"
+                  value="maybe"
+                />
+                Maybe
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Submit button -->
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- ========================
+       FOOTER
+  ======================== -->
+    <footer>
+      <p>&copy; Lone Starfish.</p>
+    </footer>
+  </body>
+</html>

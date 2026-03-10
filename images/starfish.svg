@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Simple local article image (SVG) used inside the story section.
+  Using a local file keeps the submission self-contained.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" role="img" aria-label="Illustration of a starfish on sand">
+  <defs>
+    <radialGradient id="sand" cx="35%" cy="25%" r="80%">
+      <stop offset="0" stop-color="#f8f1e3"/>
+      <stop offset="1" stop-color="#e8dcc6"/>
+    </radialGradient>
+    <radialGradient id="star" cx="40%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#ffb26b"/>
+      <stop offset="1" stop-color="#db6a3f"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 .35 0" result="s"/>
+      <feOffset in="s" dx="0" dy="10" result="o"/>
+      <feMerge>
+        <feMergeNode in="o"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background sand -->
+  <rect width="900" height="650" fill="url(#sand)"/>
+
+  <!-- Subtle sand ripples -->
+  <g opacity="0.22" fill="none" stroke="#cdbda3" stroke-width="3">
+    <path d="M-40 130 C110 90 270 170 430 130 S740 170 940 130"/>
+    <path d="M-40 210 C110 170 270 250 430 210 S740 250 940 210"/>
+    <path d="M-40 290 C110 250 270 330 430 290 S740 330 940 290"/>
+    <path d="M-40 370 C110 330 270 410 430 370 S740 410 940 370"/>
+  </g>
+
+  <!-- Starfish -->
+  <g filter="url(#shadow)">
+    <path d="M450 120
+             C430 170 410 210 360 235
+             C310 260 255 260 210 300
+             C265 320 310 335 345 375
+             C380 415 390 470 410 525
+             C445 485 475 450 520 450
+             C565 450 595 485 630 525
+             C650 470 660 415 695 375
+             C730 335 775 320 830 300
+             C785 260 730 260 680 235
+             C630 210 610 170 590 120
+             C555 160 520 200 450 200
+             C380 200 345 160 310 120
+             C345 150 380 165 410 180
+             C440 195 460 195 490 180
+             C520 165 555 150 590 120 Z"
+          fill="url(#star)"/>
+    <!-- Texture dots -->
+    <g opacity="0.55" fill="#ffd6aa">
+      <circle cx="450" cy="260" r="9"/>
+      <circle cx="390" cy="300" r="7"/>
+      <circle cx="510" cy="305" r="6"/>
+      <circle cx="450" cy="345" r="7"/>
+      <circle cx="415" cy="395" r="6"/>
+      <circle cx="485" cy="400" r="7"/>
+    </g>
+  </g>
+</svg>
+
