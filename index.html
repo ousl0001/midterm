@@ -23,7 +23,7 @@
   ======================== -->
     <header>
       <!-- Header image -->
-      <img src="images/hero.svg" alt="Starfish on sandy beach" />
+      <img src="images/lone-starfish-wide.jpg" alt="Starfish on sandy beach" />
       <!-- Site title overlaid on top of the header image -->
       <h1>Lone Starfish</h1>
     </header>
@@ -34,7 +34,7 @@
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#facts">Facts</a></li>
+        <li><a href="#story">Story</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -49,29 +49,29 @@
         <h2>Life of a Starfish</h2>
 
         <!-- Article image - text wraps around it via float in CSS -->
-        <img src="images/starfish.svg" alt="A lone starfish up close" />
+        <img src="images/lone-starfish.jpg" alt="A lone starfish up close" />
 
         <p>
-          Swallower calia Black angelfish grunter striped bass scissor-tail
-          rasbora; slender mola. Snapper catalufa silver driftfish, kaiuga
-          lonfish boga greeneye; french angelfish peamouth halfbeak batfish
-          Australian prowfish mouthbrooder. Gibberfish lui club mooneye
+          Swallower catla Black angelfish grunter striped bass scissor-tail
+          rasbora; slender mola. Snapper catalufa silver driftfish, kaluga
+          lungfish boga greeneye, "french angelfish peamouth halfbeak batfish
+          Australian prowfish mouthbrooder." Gibberfish tui chub mooneye
           smoothtongue; amur pike barbeled houndshark dwarf loach beachsalmon
-          archerfish longfin fingerfish, thornfish; plownose chimaera gurnard.
+          archerfish longfin fingerfish, thornfish: plownose chimaera gurnard.
           Dragon goby long-finned char bluntnose knifefish aruana eelpout
-          elasmobranchii snipefish; rock bass sea devil trunkfish. Australian
-          herring barbel Mexican golden trout, killfish bonito; northern
+          elasmobranch snipefish; rock bass sea devil trunkfish. Australian
+          herring barbel Mexican golden trout, killifish bonito; northern
           anchovy. Waryfish, "lionfish; longfin smelt; leopard danio
-          dragonfish." Lost River sucker, mojarra. Modoc so northern dingfish
-          mudsucker x-ray tetra squaretail jackfish. Paradise fish cuchia
-          Redhorse sucker ayu Ganges shark rocking flyingfish pearleye mahi-mahi
-          yellow weaver; ghost pipefish ide armoured catfish halibut. Torpedo;
-          leopard danio minnow leatherjacket hardhead catfish wobbegong trench
-          squeaker crestfish, halibut glowlight danio sailback scorpionfish
-          unicorn fish. Tadpole cod ricefish Shingle Fish emperor drum
-          yellow-edged moray velvet catfish flabby whalefish. Featherfin
+          dragonfish," Lost River sucker, mojarra. Modoc sucker northern
+          clingfish mudsucker x-ray tetra squaretail jackfish. Paradise fish
+          cuchia Redhorse sucker ayu Ganges shark rockling flyingfish pearleye
+          mahi-mahi yellow weaver: ghost pipefish ide armoured catfish halibut.
+          Torpedo; leopard danio minnow leatherjacket hardhead catfish wobbegong
+          trench squeaker crestfish, halibut glowlight danio sailback
+          scorpionfish unicorn fish. Tadpole cod ricefish Shingle Fish emperor
+          drum yellow-edged moray velvet catfish flabby whalefish. Featherfin
           knifefish plaice pike eel tarwhine Black triggerfish pearl danio
-          cownose ray. Marluccid hake, platy peamouth humuhumunukunukuapua'a
+          cownose ray. Merluccid hake, platy peamouth humuhumunukunukuapua'a
           barred danio. Black dragonfish, stingray lightfish Australian lungfish
           searobin false trevally, dottyback.
         </p>
@@ -82,22 +82,10 @@
       <section id="facts">
         <h2>Facts About Starfish</h2>
         <ul>
-          <li>
-            Australian herring barbel Mexican golden trout, killfish bonito;
-            northern anchovy.
-          </li>
-          <li>
-            Waryfish, "lionfish; longfin smelt; leopard danio dragonfish." Lost
-            River sucker, mojarra.
-          </li>
-          <li>
-            Herring barbel Mexican golden trout, killfish bonito; northern
-            anchovy.
-          </li>
-          <li>
-            Waryfish, "lionfish; longfin smelt; leopard danio dragonfish." Lost
-            River sucker, mojarra.
-          </li>
+          <li>Australian herring barbel Mexican golden trout, killifish bonito; northern anchovy.</li>
+          <li>Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra.</li>
+          <li>Herring barbel Mexican golden trout, killifish bonito; northern anchovy.</li>
+          <li>Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra.</li>
         </ul>
       </section>
 
@@ -106,11 +94,18 @@
       <section id="contact">
         <h2>Contact to learn more</h2>
 
-        <form action="#" method="post">
+        <form id="contact-form" action="#" method="post" novalidate>
           <!-- Name: label for="name" links to input id="name" -->
           <div class="form-group">
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+            <small class="error" aria-live="polite">Name is required.</small>
           </div>
 
           <!-- Email: label for="email" links to input id="email" -->
@@ -121,7 +116,9 @@
               id="email"
               name="email"
               placeholder="Your Email"
+              required
             />
+            <small class="error" aria-live="polite">Email is required.</small>
           </div>
 
           <!-- Message: label for="message" links to textarea id="message" -->
@@ -131,7 +128,9 @@
               id="message"
               name="message"
               placeholder="Your Message"
+              required
             ></textarea>
+            <small class="error" aria-live="polite">Message is required.</small>
           </div>
 
           <!-- Radio buttons: each label linked via for/id -->
@@ -170,5 +169,25 @@
     <footer>
       <p>&copy; Lone Starfish.</p>
     </footer>
+
+    <!-- Simple validation: show inline "is required" messages on submit -->
+    <script>
+      (function () {
+        var form = document.getElementById("contact-form");
+        if (!form) return;
+
+        form.addEventListener("submit", function (event) {
+          form.classList.add("was-validated");
+
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            var firstInvalid = form.querySelector(":invalid");
+            if (firstInvalid && typeof firstInvalid.focus === "function") {
+              firstInvalid.focus();
+            }
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
